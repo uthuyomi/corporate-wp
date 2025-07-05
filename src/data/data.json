@@ -19,11 +19,18 @@
         "service":{
             "heading":"Service"
         },
-        "skill":{
+        "skills":{
             "heading":"Skill"
         },
         "contact":{
-            "heading":"Contact"
+            "heading":"Contact",
+            "form":{
+                "name": "名前",
+                "kana": "フリガナ",
+                "email": "メールアドレス",
+                "text": "お問い合わせ内容",
+                "button": "送信"
+            }
         },
         "footer":{
             "copyRight":"@ kaisei yasuzaki"

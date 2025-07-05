@@ -12,8 +12,8 @@ const index = () => {
       <Hero hero={Data.toppage.hero} />
       <Profile profile={Data.toppage.profile} />
       <Service service={Data.toppage.service} />
-      <Skills />
-      <Contact/>
+      <Skills skills={Data.toppage.skills} />
+      <Contact contact={Data.toppage.contact} />
     </>
   )
 }

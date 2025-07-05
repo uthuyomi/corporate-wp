@@ -1,11 +1,17 @@
 import React from 'react'
 
-const Skills = () => {
+type SkillsProps = {
+  skills: {
+    heading: string;
+  }
+}
+
+const Skills = ({skills}: SkillsProps) => {
   return (
       <div className={ }>
-          <h2>Skills</h2>
-          <div className={ }>
-              
+      <h2>{skills.heading}</h2>
+      <div className={ }>
+        
           </div>
       </div>
   )

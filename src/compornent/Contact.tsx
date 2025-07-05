@@ -1,19 +1,31 @@
 import React from 'react'
+type ContactProps = {
+    contact: {
+        heading: string;
+        form: {
+            name: string;
+            kana: string;
+            email: string;
+            text: string;
+            button: string;
+        }
+    }
+}
 
-const Contact = () => {
+const Contact = ({contact}: ContactProps) => {
   return (
       <div className={ }>
-          <h2>Contact</h2>
+          <h2>{contact.heading}</h2>
           <from>
-              <h3>名前</h3>
+              <h3>{contact.form.name}</h3>
               <input type="text" />
-              <h3>フリガナ</h3>
+              <h3>{contact.form.kana}</h3>
               <input type="text" />
-              <h3>メールアドレス</h3>
+              <h3>{contact.form.email}</h3>
               <input type="text" />
-              <h3>お問い合わせ内容</h3>
+              <h3>{contact.form.text}</h3>
               <textarea name="" id=""></textarea>
-              <button>送信</button>
+              <button>{contact.form.button}</button>
           </form>
       </div>
   )
