@@ -1,18 +1,19 @@
 {
     "toppage":{
         "hero":{
-          "heroheading": "見出し見出し",
-          "herotext": "テキストテキスト",
+          "heading": "見出し見出し",
+          "text": "テキストテキスト",
           "linkUrl": "",
           "linkText": ""
         },
-        "about":{
-            "Heading": "",
+        "profile":{
+            "Heading01": "about",
             "imgUrl": "",
-            "text": "",
+            "heading02": "安崎　海星",
+            "text": "texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext",
             "sns":[
-              { "link": "https//", "img": "" },
-              { "link": "https//", "img": "" }
+              { "link": "https//", "imUrl": "" },
+              { "link": "https//", "imgUrl": "" }
             ]
         },
         "service":{
