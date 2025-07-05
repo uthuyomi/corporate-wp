@@ -1,4 +1,5 @@
 import React from 'react'
+import style from '@/compornent/Contact.module.scss'
 type ContactProps = {
     contact: {
         heading: string;
@@ -16,7 +17,7 @@ const Contact = ({contact}: ContactProps) => {
   return (
       <div className={style.Contact}>
           <h2>{contact.heading}</h2>
-          <from>
+          <form>
               <label>{contact.form.name}</label>
               <input type="text" />
               <label>{contact.form.kana}</label>
