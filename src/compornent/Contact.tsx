@@ -4,7 +4,7 @@ const Contact = () => {
   return (
       <div className={ }>
           <h2>Contact</h2>
-          <from action="hello.tsx">
+          <from>
               <h3>名前</h3>
               <input type="text" />
               <h3>フリガナ</h3>

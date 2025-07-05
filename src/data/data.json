@@ -1,0 +1,19 @@
+{
+    "toppage":{
+        "hero":{
+          "heroheading": "見出し見出し",
+          "herotext": "テキストテキスト",
+          "linkUrl": "",
+          "linkText": ""
+        },
+        "about":{
+            "Heading": "",
+            "imgUrl": "",
+            "text": "",
+            "sns":[
+              { "link": "https//", "img": "" },
+              { "link": "https//", "img": "" }
+            ]
+        }
+    }
+}
