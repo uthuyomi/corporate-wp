@@ -14,16 +14,16 @@ type ContactProps = {
 
 const Contact = ({contact}: ContactProps) => {
   return (
-      <div className={ }>
+      <div className={style.Contact}>
           <h2>{contact.heading}</h2>
           <from>
-              <h3>{contact.form.name}</h3>
+              <label>{contact.form.name}</label>
               <input type="text" />
-              <h3>{contact.form.kana}</h3>
+              <label>{contact.form.kana}</label>
               <input type="text" />
-              <h3>{contact.form.email}</h3>
+              <label>{contact.form.email}</label>
               <input type="text" />
-              <h3>{contact.form.text}</h3>
+              <label>{contact.form.text}</label>
               <textarea name="" id=""></textarea>
               <button>{contact.form.button}</button>
           </form>
