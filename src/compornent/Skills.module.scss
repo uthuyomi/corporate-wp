@@ -1,4 +1,17 @@
 .Skill{
     h2{}
-    .Skill_Slider{}
+    .Skill_Slider{
+        .Skill_slider_slide{
+            .img{
+                img{}
+            }
+            .Level{
+                h3{}
+                div.Level_img{
+                    img{}
+                    p{}
+                }
+            }
+        }
+    }
 }

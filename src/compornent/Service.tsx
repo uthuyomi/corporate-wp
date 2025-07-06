@@ -12,9 +12,7 @@ const Service = ({service}: ServiceProps) => {
   return (
     <div className={style.Service}>
       <h2>{service.heading}</h2>
-      <div className={style.Service_Item}>
-        <ServiceItem/>
-      </div>
+      <ServiceItem/>
     </div>
   )
 }
