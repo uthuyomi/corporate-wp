@@ -6,24 +6,44 @@ import Contact from '@/compornent/Contact';
 import Profile from '@/compornent/Profile';
 import Data from '@/data/data.json'
 
-export async function getStaticProps() { 
-  const res = await fetch(
-    "https://webyayasu.sakura.ne.jp/webyayasu-next/wp-json/acf/v3/pages/21"
-  );
-  const page = await res.json();
+export async function getStaticProps() {
+  try {
+    const res = await fetch(
+      "https://webyayasu.sakura.ne.jp/webyayasu-next/wp-json/acf/v3/pages/21"
+    );
 
-  return {
-    props: {
-      page,
-    },
+    if (!res.ok) {
+      console.error("Fetch失敗:", res.status, res.statusText);
+      return { props: { page: null } };
+    }
+
+    const page = await res.json();
+
+    console.log("【サーバー側】取得したページデータ:", page);
+
+    return { props: { page } };
+  } catch (error) {
+    console.error("Fetch例外発生:", error);
+    return { props: { page: null } };
   }
 }
 
-const index = ({ page }) => {
+type PageProps = {
+  page: {
+    acf: {
+      hero_heading?: string;
+      hero_text?: string;
+    };
+  };
+};
+
+const index = ({ page }:PageProps) => {
   console.log("取得したページデータ:", page);
   return (
     <>
-      {page?.acf?.hero && <Hero hero={Data.toppage.hero} acf={page.acf} />}
+      {(page?.acf?.hero_heading || page?.acf?.hero_text) && (
+        <Hero hero={Data.toppage.hero} acf={page.acf} />
+      )}
       <Profile profile={Data.toppage.profile} />
       <Service service={Data.toppage.service} />
       <Skills skills={Data.toppage.skills} />

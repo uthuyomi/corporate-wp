@@ -1,7 +1,7 @@
 import style from "@/compornent/Hero.module.scss";
 import Link from "next/link";
 import React from "react";
-import type { AcfHero } from "@/types/acf";
+
 
 type DataProps = {
   hero: { 
@@ -10,11 +10,14 @@ type DataProps = {
     linkUrl: string;
     linkText: string;
   },
-  acf: AcfHero;
+  acf: {
+    hero_heading?: string;
+    hero_text?: string;
+  };
 }
 
 
-const AboutHero = ({ hero, acf }: DataProps) => {
+const Hero = ({ hero, acf }: DataProps) => {
   const heading = acf.hero_heading ? acf.hero_heading : hero.heading;
   const text = acf.hero_text ? acf.hero_text : hero.text;
   
@@ -30,4 +33,4 @@ const AboutHero = ({ hero, acf }: DataProps) => {
   );
 };
 
-export default AboutHero;
+export default Hero;
