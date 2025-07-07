@@ -13,6 +13,8 @@ type DataProps = {
   acf: {
     hero_heading?: string;
     hero_text?: string;
+    hero_url?: string;
+    hero_url_label?: string;
   };
 }
 
@@ -20,6 +22,8 @@ type DataProps = {
 const Hero = ({ hero, acf }: DataProps) => {
   const heading = acf.hero_heading ? acf.hero_heading : hero.heading;
   const text = acf.hero_text ? acf.hero_text : hero.text;
+  const url = acf.hero_url ? acf.hero_url : hero.linkUrl;
+  const url_label = acf.hero_url_label ? acf.hero_url_label : hero.linkText;
   
 
   return (
@@ -27,7 +31,7 @@ const Hero = ({ hero, acf }: DataProps) => {
       <div className={style.About_Hero_heading}>
         <h1>{heading}</h1>
         <p>{text}</p>
-        <Link href={hero.linkUrl}>{ hero.linkText}</Link>
+        <Link href={url}>{url_label}</Link>
       </div>
     </div>
   );
