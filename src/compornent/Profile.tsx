@@ -1,4 +1,4 @@
-import style from "./TopAbout.module.scss";
+import style from "@/compornent/Profile.module.scss";
 import Link from "next/link";
 import Image from "next/image";
 import React from "react";
