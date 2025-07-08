@@ -3,22 +3,25 @@ import Link from "next/link";
 import Image from "next/image";
 import React from "react";
 
-type SnsProps = {
-  link: string;
-  imgUrl: string;
-};
-
 type ProfileProps = {
   profile: {
     heading01: string;
     imgUrl: string;
     heading02: string;
     text: string;
-    sns: SnsProps[];
+  };
+  acf: {
+    heading01: string;
+    imgUrl: string;
+    heading02: string;
+    text: string;
   };
 };
 
-const TopAboutProfile = ({ profile }: ProfileProps) => {
+
+const TopAboutProfile = ({ profile, acf }: ProfileProps) => {
+  const heading01 = acf.heading01 ? acf.heading01 : profile.heading01;
+  
   return (
     <div className={style.Profile}>
       <h2>{profile.heading01}</h2>

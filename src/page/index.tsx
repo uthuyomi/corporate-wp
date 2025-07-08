@@ -23,11 +23,12 @@ export default async function Index() {
   );
 
   const page: PageData = await res.json();
+  console.log(page);
 
   return (
     <>
       <Hero hero={Data.toppage.hero} acf={page.acf} />
-      <Profile profile={Data.toppage.profile} />
+      <Profile profile={Data.toppage.profile} acf={page.acf} />
       <Service service={Data.toppage.service} />
       <Skills skills={Data.toppage.skills} />
       <Contact contact={Data.toppage.contact} />
