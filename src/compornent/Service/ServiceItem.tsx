@@ -1,20 +1,27 @@
 import React from 'react'
 import Image from 'next/image'
 import style from '@/compornent/Service.module.scss'
-import dummy from "../../../public/assets/Hero.jpg";
+import { AcfService } from '@/types/acf';
 
-const ServiceItem = () => {
+type ServiceItemProps = {
+  acf: AcfService;
+}
+
+const ServiceItem = ({acf}: ServiceItemProps) => {
   return (
     <div className={style.Service_item}>
       <div className={style.img}>
-        <Image src={dummy} alt="dummy" width={100} height={100} />
+        <Image
+          src={acf.acf.service_item_thumbnail}
+          alt="サムネイル"
+          width={100}
+          height={100}
+        />
       </div>
-      <h3>LPコーディング</h3>
-      <p>
-        テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
-      </p>
+      <h3></h3>
+      <p></p>
     </div>
-  )
+  );
 }
 
 export default ServiceItem
