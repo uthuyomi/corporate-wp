@@ -13,7 +13,7 @@ const ProfileSns = () => {
 
   useEffect(() => {
     fetch(
-      "https://webyayasu.sakura.ne.jp/webyayasu-next/wp-json/wp/v2/service?acf_format=standard"
+      "https://webyayasu.sakura.ne.jp/webyayasu-next/wp-json/wp/v2/sns?acf_format=standard"
     )
       .then((res) => res.json())
       .then((data: AcfSns[]) => setSns(data))
