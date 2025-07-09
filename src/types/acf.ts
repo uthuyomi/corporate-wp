@@ -11,3 +11,11 @@ export type AcfService = {
     service_item_text: string;
   };
 };
+
+export type AcfSns = {
+  id: number;
+  acf: {
+    sns_imgUrl: string;
+    sns_linkUrl: string;
+  };
+};
