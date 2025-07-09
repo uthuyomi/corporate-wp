@@ -5,9 +5,9 @@ import { AcfService } from '@/types/acf';
 
 type ServiceItemProps = {
   acf: AcfService;
-}
+};
 
-const ServiceItem = ({acf}: ServiceItemProps) => {
+const ServiceItem = ({ acf }: ServiceItemProps) => {
   return (
     <div className={style.Service_item}>
       <div className={style.img}>
@@ -18,10 +18,10 @@ const ServiceItem = ({acf}: ServiceItemProps) => {
           height={100}
         />
       </div>
-      <h3></h3>
-      <p></p>
+      <h3>{acf.acf.service_item_title}</h3>
+      <p>{acf.acf.service_item_text}</p>
     </div>
   );
-}
+};
 
 export default ServiceItem
