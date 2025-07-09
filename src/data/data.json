@@ -8,13 +8,9 @@
         },
         "profile":{
             "Heading01": "about",
-            "imgUrl": "",
+            "imgUrl": "/assets/profile.jp",
             "heading02": "安崎　海星",
-            "text": "texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext",
-            "sns":[
-              { "link": "https//", "imUrl": "" },
-              { "link": "https//", "imgUrl": "" }
-            ]
+            "text": "texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext"
         },
         "service":{
             "heading":"Service"
