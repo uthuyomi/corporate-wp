@@ -12,7 +12,7 @@ type ProfileProps = {
   };
   acf: {
     profile_heading01: string;
-    profile_imgUrl: string;
+    profile_img_url: string;
     profile_heading02: string;
     profile_text: string;
   };
@@ -22,7 +22,7 @@ const TopAboutProfile = ({ profile, acf }: ProfileProps) => {
   const heading01 = acf.profile_heading01
     ? acf.profile_heading01
     : profile.heading01;
-  const imgUrl = acf.profile_imgUrl ? acf.profile_imgUrl : profile.imgUrl;
+  const imgUrl = acf.profile_img_url ? acf.profile_img_url : profile.imgUrl;
   const heading02 = acf.profile_heading02
     ? acf.profile_heading02
     : profile.heading02;

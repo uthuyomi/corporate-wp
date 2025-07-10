@@ -26,5 +26,6 @@ export type AcfSkill = {
     skill_item_thumbnail: string;
     skill_item_img: string;
     skill_item_text: string;
+    skill_item_level_text: string;
   };
 };
