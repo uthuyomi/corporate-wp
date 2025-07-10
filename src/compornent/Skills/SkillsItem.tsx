@@ -3,6 +3,21 @@ import Image from "next/image";
 import style from '@/compornent/Skills.module.scss'
 import dummy from '../../../public/assets/Hero.jpg'
 const SkillsItem = () => {
+
+   const [sns, setSns] = useState<AcfSns[] | null>(null);
+    const [error, setError] = useState<Error | null>(null);
+  
+    useEffect(() => {
+      fetch("https://webyayasu.sakura.ne.jp/webyayasu-next/wp-json/wp/v2/skill_item")
+        .then((res) => res.json())
+        .then((data: AcfSns[]) => setSns(data))
+        .catch((err) => setError(err));
+    }, []);
+  
+    if (error) return <p>エラーが発生しました</p>;
+    if (!sns) return <p>読み込み中...</p>;
+  
+
   return (
     <div className={style.Skill_slider_slide}>
       <div className={style.img}>
