@@ -15,7 +15,7 @@ export type AcfService = {
 export type AcfSns = {
   id: number;
   acf: {
-    sns_imgUrl: string;
-    sns_linkUrl: string;
+    sns_img_thumbnail: string;
+    sns_linkurl: string;
   };
 };

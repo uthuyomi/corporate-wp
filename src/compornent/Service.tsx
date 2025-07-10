@@ -17,7 +17,7 @@ const Service = ({ service }: Props) => {
 
   useEffect(() => {
     fetch(
-      "https://webyayasu.sakura.ne.jp/webyayasu-next/wp-json/wp/v2/service?acf_format=standard"
+      "https://webyayasu.sakura.ne.jp/webyayasu-next/wp-json/wp/v2/service"
     )
       .then((res) => res.json())
       .then((data: AcfService[]) => setServices(data))

@@ -12,9 +12,7 @@ const ProfileSns = () => {
   const [error, setError] = useState<Error | null>(null);
 
   useEffect(() => {
-    fetch(
-      "https://webyayasu.sakura.ne.jp/webyayasu-next/wp-json/wp/v2/sns?acf_format=standard"
-    )
+    fetch("https://webyayasu.sakura.ne.jp/webyayasu-next/wp-json/wp/v2/sns")
       .then((res) => res.json())
       .then((data: AcfSns[]) => setSns(data))
       .catch((err) => setError(err));
@@ -22,14 +20,15 @@ const ProfileSns = () => {
 
   if (error) return <p>エラーが発生しました</p>;
   if (!sns) return <p>読み込み中...</p>;
+
   return (
     <div className={style.Profile_Data_sns}>
       {sns.map((item) => (
-        <Link key={item.id} href={item.acf.sns_linkUrl}>
+        <Link key={item.id} href={item.acf.sns_linkurl}>
           <div className={style.img}>
             <Image
-              src={item.acf.sns_imgUrl}
-              alt={item.acf.sns_imgUrl}
+              src={item.acf.sns_img_thumbnail}
+              alt={item.acf.sns_img_thumbnail}
               width={100}
               height={100}
             />
