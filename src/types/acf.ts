@@ -19,3 +19,12 @@ export type AcfSns = {
     sns_linkurl: string;
   };
 };
+
+export type AcfSkill = {
+  id: number;
+  acf: {
+    skill_item_thumbnail: string;
+    skill_item_img: string;
+    skill_item_text: string;
+  };
+};
