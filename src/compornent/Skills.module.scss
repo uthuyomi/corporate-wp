@@ -7,11 +7,10 @@
   }
   .Skill_Slider {
     display: flex;
-    width: 100%;
     gap: 30px;
-    overflow-y: hidden;
-    .Skill_slider_slide {
-      min-width: 400px;
+    .swiper-slide {
+      width: 400px;
+      .Skill_slider_slide {
       background-color: #ffffff;
       word-break: break-word;
       overflow-wrap: break-word;
@@ -45,5 +44,7 @@
         }
       }
     }
+    }
+    
   }
 }

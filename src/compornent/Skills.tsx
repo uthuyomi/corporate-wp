@@ -2,8 +2,10 @@
 
 import React from "react";
 import { Swiper } from "swiper/react";
-import "swiper/css";
-import "swiper/css/mousewheel";
+import { Navigation, Pagination } from "swiper/modules";
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
 import style from "@/compornent/Skills.module.scss";
 import SkillsItem from "./Skills/SkillsItem";
 
@@ -19,9 +21,11 @@ const Skills = ({ skills }: SkillsProps) => {
       <h2>{skills.heading}</h2>
       <Swiper
         className={style.Skill_Slider}
-        spaceBetween={16}
-        slidesPerView={"auto"}
-        style={{ padding: "20px 0" }}
+        modules={[Navigation, Pagination]}
+        spaceBetween={20}
+        slidesPerView={1}
+        navigation
+        pagination={{ clickable: true }}
       >
         <SkillsItem />
       </Swiper>

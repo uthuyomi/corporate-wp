@@ -1,12 +1,12 @@
 "use client";
 
-import { useEffect, useState, } from "react";
+import { useEffect, useState } from "react";
 import { SwiperSlide } from "swiper/react";
 import { AcfSkill } from "@/types/acf";
+import "swiper/css";
 import React from "react";
 import Image from "next/image";
 import style from "@/compornent/Skills.module.scss";
-
 
 const SkillsItem = () => {
   const [skill, setSkill] = useState<AcfSkill[] | null>(null);
@@ -26,29 +26,30 @@ const SkillsItem = () => {
     <>
       {skill.map((item, index) => (
         <SwiperSlide key={index} className={style.Skill_slider_slide}>
-          <div className={style.img}>
-            <Image
-              src={item.acf.skill_item_thumbnail}
-              alt="サムネイル"
-              width={100}
-              height={100}
-            />
-          </div>
-          <div className={style.text}>
-            <p>{item.acf.skill_item_text}</p>
-            <div className={style.Level}>
-              <h3>スキルレベル</h3>
-              <div className={style.Level_img}>
-                <Image
-                  src={item.acf.skill_item_img}
-                  alt="dummy"
-                  width={100}
-                  height={100}
-                />
-                <p>{item.acf.skill_item_level_text}</p>
+          
+            <div className={style.img}>
+              <Image
+                src={item.acf.skill_item_thumbnail}
+                alt="サムネイル"
+                width={100}
+                height={100}
+              />
+            </div>
+            <div className={style.text}>
+              <p>{item.acf.skill_item_text}</p>
+              <div className={style.Level}>
+                <h3>スキルレベル</h3>
+                <div className={style.Level_img}>
+                  <Image
+                    src={item.acf.skill_item_img}
+                    alt="dummy"
+                    width={100}
+                    height={100}
+                  />
+                  <p>{item.acf.skill_item_level_text}</p>
+                </div>
               </div>
             </div>
-          </div>
         </SwiperSlide>
       ))}
     </>
