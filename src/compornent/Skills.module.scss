@@ -1,12 +1,18 @@
 .Skill {
-  width: 1380px;
-  margin: 150px auto 0;
+  width: 1260px;
+  margin: 150px auto 100px;
   h2 {
+    font-size: 40px;
+    text-align: center;
   }
   .Skill_Slider {
+    width: 100%;
+    gap: 30px;
     .Skill_slider_slide {
-      width: 400px;
+      min-width: 400px;
       background-color: #ffffff;
+      word-break: break-word;
+      overflow-wrap: break-word;
       .img {
         position: relative;
         width: 400px;
@@ -21,14 +27,19 @@
       .text {
         p {
           color: #000000;
+         
         }
         h3 {
           color: #000000;
+          word-break: break-word;
+            overflow-wrap: break-word;
         }
         div.Level_img {
           img {
           }
           p {
+            word-break: break-word;
+            overflow-wrap: break-word;
           }
         }
       }

@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, } from "react";
 import { AcfSkill } from "@/types/acf";
 import React from "react";
 import Image from "next/image";
