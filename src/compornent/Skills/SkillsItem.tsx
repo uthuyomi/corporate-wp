@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState, } from "react";
+import { SwiperSlide } from "swiper/react";
 import { AcfSkill } from "@/types/acf";
 import React from "react";
 import Image from "next/image";
@@ -23,8 +24,8 @@ const SkillsItem = () => {
 
   return (
     <>
-      {skill.map((item) => (
-        <div className={style.Skill_slider_slide}>
+      {skill.map((item, index) => (
+        <SwiperSlide key={index} className={style.Skill_slider_slide}>
           <div className={style.img}>
             <Image
               src={item.acf.skill_item_thumbnail}
@@ -48,7 +49,7 @@ const SkillsItem = () => {
               </div>
             </div>
           </div>
-        </div>
+        </SwiperSlide>
       ))}
     </>
   );

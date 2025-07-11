@@ -6,10 +6,12 @@
     text-align: center;
   }
   .Skill_Slider {
+    display: flex;
     width: 100%;
     gap: 30px;
+    overflow-y: hidden;
     .Skill_slider_slide {
-      min-gitwidth: 400px;
+      min-width: 400px;
       background-color: #ffffff;
       word-break: break-word;
       overflow-wrap: break-word;
@@ -27,12 +29,11 @@
       .text {
         p {
           color: #000000;
-         
         }
         h3 {
           color: #000000;
           word-break: break-word;
-            overflow-wrap: break-word;
+          overflow-wrap: break-word;
         }
         div.Level_img {
           img {

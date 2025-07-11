@@ -1,7 +1,9 @@
 "use client";
 
-import { useEffect, useRef } from "react";
 import React from "react";
+import { Swiper } from "swiper/react";
+import "swiper/css";
+import "swiper/css/mousewheel";
 import style from "@/compornent/Skills.module.scss";
 import SkillsItem from "./Skills/SkillsItem";
 
@@ -12,47 +14,17 @@ type SkillsProps = {
 };
 
 const Skills = ({ skills }: SkillsProps) => {
-  const scrollRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const el = scrollRef.current;
-    if (!el) return;
-
-    const handleWheel = (e: WheelEvent) => {
-      const rect = el.getBoundingClientRect();
-      const centerY = window.innerHeight / 2;
-      const inView = rect.top < centerY + 150 && rect.bottom > centerY - 150;
-
-      const atStart = el.scrollLeft === 0;
-      const atEnd = el.scrollLeft + el.clientWidth >= el.scrollWidth - 1;
-
-      if (inView && !(atStart && e.deltaY < 0) && !(atEnd && e.deltaY > 0)) {
-        e.preventDefault();
-        el.scrollLeft += e.deltaY;
-      }
-    };
-
-    el.addEventListener("wheel", handleWheel, { passive: false });
-
-    return () => {
-      el.removeEventListener("wheel", handleWheel);
-    };
-  }, []);
-
   return (
     <section className={style.Skill}>
       <h2>{skills.heading}</h2>
-      <div
-        ref={scrollRef}
+      <Swiper
         className={style.Skill_Slider}
-        style={{
-          display: "flex",
-          overflowX: "auto",
-          scrollBehavior: "smooth",
-        }}
+        spaceBetween={16}
+        slidesPerView={"auto"}
+        style={{ padding: "20px 0" }}
       >
         <SkillsItem />
-      </div>
+      </Swiper>
     </section>
   );
 };
