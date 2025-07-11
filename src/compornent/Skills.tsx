@@ -20,7 +20,8 @@ const Skills = ({ skills }: SkillsProps) => {
 
     const handleWheel = (e: WheelEvent) => {
       const rect = el.getBoundingClientRect();
-      const inView = rect.top < window.innerHeight && rect.bottom > 0;
+      const centerY = window.innerHeight / 2;
+      const inView = rect.top < centerY + 150 && rect.bottom > centerY - 150;
 
       const atStart = el.scrollLeft === 0;
       const atEnd = el.scrollLeft + el.clientWidth >= el.scrollWidth - 1;
@@ -31,10 +32,10 @@ const Skills = ({ skills }: SkillsProps) => {
       }
     };
 
-    window.addEventListener("wheel", handleWheel, { passive: false });
+    el.addEventListener("wheel", handleWheel, { passive: false });
 
     return () => {
-      window.removeEventListener("wheel", handleWheel);
+      el.removeEventListener("wheel", handleWheel);
     };
   }, []);
 
