@@ -1,6 +1,7 @@
 // "use client" は絶対に書かないこと！
 
 import ParticlesBackground from "@/components/ParticlesBackground";
+import Header from '@/components/Header/Header';
 import Hero from "@/components/Hero/Hero";
 import Service from "@/components/Service/Service";
 import Skills from "@/components/Skills/Skills";
@@ -28,6 +29,7 @@ export default async function Index() {
 
   return (
     <>
+      <Header />
       <ParticlesBackground />
       <Hero hero={Data.toppage.hero} acf={page.acf} />
       <Profile profile={Data.toppage.profile} acf={page.acf} />

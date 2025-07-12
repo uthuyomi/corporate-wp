@@ -27,7 +27,7 @@ const Hero = ({ hero, acf }: DataProps) => {
   
 
   return (
-    <div className={style.About_Hero}>
+    <div id="top" className={style.About_Hero}>
       <div className={style.About_Hero_heading}>
         <h1>{heading}</h1>
         <p>{text}</p>
