@@ -1,4 +1,4 @@
-import style from '@/compornent/Hero/Hero.module.scss'
+import style from '@/components/Hero/Hero.module.scss'
 import Link from "next/link";
 import React from "react";
 

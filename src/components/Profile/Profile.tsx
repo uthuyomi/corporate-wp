@@ -1,7 +1,7 @@
-import style from "@/compornent/Profile.module.scss";
+import style from "@/components/Profile.module.scss";
 import Image from "next/image";
 import React from "react";
-import ProfileSns from "@/compornent/Profile/ProfileSns";
+import ProfileSns from "@/components/Profile/ProfileSns";
 
 type ProfileProps = {
   profile: {
@@ -37,7 +37,7 @@ const TopAboutProfile = ({ profile, acf }: ProfileProps) => {
       <div className={style.Profile_Data}>
         <h3>{heading02}</h3>
         <p>{text}</p>
-        <ProfileSns/>
+        <ProfileSns />
       </div>
     </div>
   );

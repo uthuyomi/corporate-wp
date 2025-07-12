@@ -1,5 +1,5 @@
 import React from 'react'
-import style from '@/compornent/Contact/Contact.module.scss'
+import style from '@/components/Contact/Contact.module.scss'
 type ContactProps = {
     contact: {
         heading: string;

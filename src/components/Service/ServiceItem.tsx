@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { AcfService } from "@/types/acf";
 import React from "react";
 import Image from "next/image";
-import style from "@/compornent/Service.module.scss";
+import style from "@/components/Service.module.scss";
 
 
 const ServiceItem = () => {

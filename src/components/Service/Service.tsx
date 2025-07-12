@@ -1,5 +1,5 @@
 import style from "./Service.module.scss";
-import ServiceItem from "@/compornent/Service/ServiceItem";
+import ServiceItem from "@/components/Service/ServiceItem";
 
 type Props = {
   service: {
@@ -8,7 +8,6 @@ type Props = {
 };
 
 const Service = ({ service }: Props) => {
-
   return (
     <div className={style.Service}>
       <h2>{service.heading}</h2>
