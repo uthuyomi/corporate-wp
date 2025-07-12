@@ -1,11 +1,11 @@
 // "use client" は絶対に書かないこと！
 
 import ParticlesBackground from "@/compornent/ParticlesBackground";
-import Hero from "@/compornent/Hero";
-import Service from "@/compornent/Service";
-import Skills from "@/compornent/Skills";
-import Contact from "@/compornent/Contact";
-import Profile from "@/compornent/Profile";
+import Hero from "@/compornent/Hero/Hero";
+import Service from "@/compornent/Service/Service";
+import Skills from "@/compornent/Skills/Skills";
+import Contact from "@/compornent/Contact/Contact";
+import Profile from "@/compornent/Profile/Profile";
 import Data from "@/data/data.json";
 
 type PageData = {

@@ -1,5 +1,5 @@
 import style from "./Service.module.scss";
-import ServiceItem from "./Service/ServiceItem";
+import ServiceItem from "@/compornent/Service/ServiceItem";
 
 type Props = {
   service: {

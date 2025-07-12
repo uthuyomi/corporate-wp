@@ -12,6 +12,9 @@
     position: relative;
     padding: 0 40px;
     overflow: visible;
+    :global(.swiper-button-prev, .swiper-button-next){
+      color: #fff;
+    }
     :global(.swiper-button-prev) {
       left: 0; // ← 外側に出す
       top: 50%;

@@ -1,7 +1,7 @@
 import style from "@/compornent/Profile.module.scss";
 import Image from "next/image";
 import React from "react";
-import ProfileSns from "./Profile/ProfileSns";
+import ProfileSns from "@/compornent/Profile/ProfileSns";
 
 type ProfileProps = {
   profile: {
