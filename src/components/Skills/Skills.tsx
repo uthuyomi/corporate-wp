@@ -40,6 +40,7 @@ const Skills = ({ skills }: SkillsProps) => {
       <div className={style.Slider_wrapper}>
         <div className="swiper-button-prev"></div>
         <div className="swiper-button-next"></div>
+        <div className="swiper-pagination"></div>
         <Swiper
           className={style.Skill_Slider}
           modules={[Navigation, Pagination]}
@@ -47,9 +48,12 @@ const Skills = ({ skills }: SkillsProps) => {
             nextEl: ".swiper-button-next",
             prevEl: ".swiper-button-prev",
           }}
+          pagination={{
+            el: ".swiper-pagination",
+            clickable: true
+          }}
           spaceBetween={30}
           slidesPerView={3} // or "auto" if you want variable width
-          pagination={{ clickable: true }}
         >
           {
             //ここからslideの処理

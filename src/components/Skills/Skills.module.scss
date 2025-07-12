@@ -11,6 +11,7 @@
   .Slider_wrapper {
     position: relative;
     padding: 0 40px;
+    margin-bottom: 40px;
     overflow: visible;
     :global(.swiper-button-prev) {
       left: 0; // ← 外側に出す
@@ -27,7 +28,26 @@
       transform: translateY(-50%);
       z-index: 10;
     }
+
+    :global(.swiper-pagination) {
+      position: absolute;
+      bottom: -30px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 10;
+    }
+    :global(.swiper-pagination-bullet) {
+      background: #fff !important; // ← ドットの色を白に
+      opacity: 0.5;
+    }
+
+    :global(.swiper-pagination-bullet-active) {
+      background: #fff !important; // ← アクティブなドットも白に
+      opacity: 1;
+    }
+
     .Skill_Slider {
+      position: relative;
       gap: 30px;
       * p,
       h3 {
@@ -51,17 +71,17 @@
             height: 100%;
             object-fit: cover;
           }
-          .text {
-            padding: 30px;
+        }
+        .text {
+          padding: 30px;
+          p {
+          }
+          h3 {
+          }
+          div.Level_img {
+            img {
+            }
             p {
-            }
-            h3 {
-            }
-            div.Level_img {
-              img {
-              }
-              p {
-              }
             }
           }
         }

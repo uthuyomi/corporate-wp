@@ -1,7 +1,7 @@
 // src/lib/particlesOptions.ts
 
 export const particlesOptions = {
-  background: { color: { value: "#0d0d0d" } },
+  background: { color: { value: "#1E2A38" } },
   fullScreen: { enable: true, zIndex: -1 },
   particles: {
     number: { value: 60 },
