@@ -6,11 +6,9 @@
     text-align: center;
   }
   .Skill_Slider {
-    display: flex;
     gap: 30px;
-    .swiper-slide {
-      width: 400px;
       .Skill_slider_slide {
+        width: 400px;
       background-color: #ffffff;
       word-break: break-word;
       overflow-wrap: break-word;
@@ -24,7 +22,6 @@
           height: 100%;
           object-fit: cover;
         }
-      }
       .text {
         p {
           color: #000000;
