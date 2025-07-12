@@ -1,4 +1,4 @@
-import style from "./Service.module.scss";
+import style from "@/components/Service/Service.module.scss";
 import ServiceItem from "@/components/Service/ServiceItem";
 
 type Props = {

@@ -11,7 +11,7 @@ import "swiper/css/pagination";
 import { SwiperSlide } from "swiper/react";
 import { AcfSkill } from "@/types/acf";
 import Image from "next/image";
-import style from "@/components/Skills.module.scss";
+import style from "@/components/Skills/Skills.module.scss";
 
 type SkillsProps = {
   skills: {

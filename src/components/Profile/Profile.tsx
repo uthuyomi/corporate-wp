@@ -1,4 +1,4 @@
-import style from "@/components/Profile.module.scss";
+import style from "@/components/Profile/Profile.module.scss";
 import Image from "next/image";
 import React from "react";
 import ProfileSns from "@/components/Profile/ProfileSns";

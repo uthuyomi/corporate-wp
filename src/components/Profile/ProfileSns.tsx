@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import { AcfSns } from "@/types/acf";
 import React from "react";
-import style from "@/components/Profile.module.scss";
+import style from "@/components/Profile/Profile.module.scss";
 import Link from "next/link";
 import Image from "next/image";
 

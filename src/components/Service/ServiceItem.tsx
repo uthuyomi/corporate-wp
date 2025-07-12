@@ -4,8 +4,7 @@ import { useEffect, useState } from "react";
 import { AcfService } from "@/types/acf";
 import React from "react";
 import Image from "next/image";
-import style from "@/components/Service.module.scss";
-
+import style from "@/components/Service/Service.module.scss";
 
 const ServiceItem = () => {
   const [services, setServices] = useState<AcfService[] | null>(null);
@@ -29,7 +28,7 @@ const ServiceItem = () => {
           className={`${style.Service_Item} ${
             index % 2 === 0 ? style.left : style.right
           }`}
-          style={{ marginTop: index === 0 ? 0 : "-100px", }}
+          style={{ marginTop: index === 0 ? 0 : "-100px" }}
         >
           <div className={style.img}>
             <Image
