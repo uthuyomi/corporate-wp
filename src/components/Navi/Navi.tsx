@@ -22,15 +22,13 @@ const Header = () => {
       .catch((err) => console.error("メニュー取得エラー", err));
   });
   return (
-      <nav className={style.menu}>
-      <ul>
-        {menu.map((item) => (
-          <li key={item.ID}>
-            <a href={item.url}>{item.title}</a>
-          </li>
-        ))}
-      </ul>
-    </nav>
+    <>
+      {menu.map((item) => (
+        <li key={item.ID} className={style.NaviList}>
+          <a href={item.url}>{item.title}</a>
+        </li>
+      ))}
+    </>
   );
 };
 

@@ -5,7 +5,11 @@ import Navi from "@/components/Navi/Navi";
 const Header = () => {
   return (
     <header className={style.header}>
-      <Navi />
+      <div className={style.menu}>
+        <ul>
+          <Navi />
+        </ul>
+      </div>
     </header>
   );
 };

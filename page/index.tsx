@@ -7,6 +7,7 @@ import Service from "@/components/Service/Service";
 import Skills from "@/components/Skills/Skills";
 import Contact from "@/components/Contact/Contact";
 import Profile from "@/components/Profile/Profile";
+import Footer from "@/components/Footer/Footer";
 import Data from "@/data/data.json";
 
 type PageData = {
@@ -36,6 +37,7 @@ export default async function Index() {
       <Service service={Data.toppage.service} />
       <Skills skills={Data.toppage.skills} />
       <Contact contact={Data.toppage.contact} />
+      <Footer />
     </>
   );
 }
