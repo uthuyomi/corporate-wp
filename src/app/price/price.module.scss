@@ -1,0 +1,36 @@
+.priceItem {
+  h3 {
+  }
+  p {
+  }
+  .table {
+    width: 100%;
+
+    table {
+      border-collapse: collapse; // セルのボーダーを重ねる
+      width: 800px;
+      margin: 0 auto;
+      font-family: Arial, sans-serif;
+      font-size: 1em;
+      background-color: rgba(255, 255, 255, 0.7);
+      color: #000000;
+
+      thead {
+        th {
+          padding: 10px;
+          border: 1px solid #000000;
+          text-align: left;
+          font-weight: bold;
+        }
+      }
+
+      tbody {
+        td {
+          padding: 10px;
+          border: 1px solid #000000;
+          text-align: left;
+        }
+      }
+    }
+  }
+}
