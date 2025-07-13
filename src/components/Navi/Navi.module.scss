@@ -1,0 +1,12 @@
+.menu{
+    ul{
+        display: flex;
+        flex-wrap: wrap;
+        li{
+            padding: 5px 20px;
+            a{
+                font-size: 20px;
+            }
+        }
+    }
+}

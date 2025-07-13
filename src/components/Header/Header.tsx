@@ -1,35 +1,12 @@
-"use client";
-
 import React from "react";
-import { useEffect, useState } from "react";
-
-type MenuItem = {
-  ID: number;
-  title: string;
-  url: string;
-};
+import style from "@/components/Header/Header.module.scss";
+import Navi from "@/components/Navi/Navi";
 
 const Header = () => {
-  const [menu, setMenu] = useState<MenuItem[]>([]);
-
-  useEffect(() => {
-    fetch(
-      "https://webyayasu.sakura.ne.jp/webyayasu-next/wp-json/menus/v1/menus/main_menu"
-    )
-      .then((res) => res.json())
-      .then((data) => setMenu(data.items))
-      .catch((err) => console.error("メニュー取得エラー", err));
-  });
   return (
-    <nav>
-      <ul>
-        {menu.map((item) => (
-          <li key={item.ID}>
-            <a href={item.url}>{item.title}</a>
-          </li>
-        ))}
-      </ul>
-    </nav>
+    <header className={style.header}>
+      <Navi />
+    </header>
   );
 };
 
