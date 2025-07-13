@@ -19,7 +19,9 @@ export default async function PricePage() {
   const res = await fetch(
     "https://webyayasu.sakura.ne.jp/webyayasu-next/wp-json/wp/v2/pages/21?acf_format=standard",
     { cache: "no-store" } // ← SSR強制（リアルタイム取得）
-  );
+    );
+    
+    
 
   const page: PageData = await res.json();
 
