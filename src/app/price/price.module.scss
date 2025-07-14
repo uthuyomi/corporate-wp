@@ -1,7 +1,15 @@
-.priceItem {
+.pricePage {
+  width: 800px;
+  margin: 0 auto;
+  padding: 30px 0;
   h3 {
+    width: 100%;
+    text-align: center;
+    padding: 30px 0 20px;
   }
   p {
+    width: 100%;
+    padding: 0 0 20px;
   }
   .table {
     width: 100%;
@@ -12,13 +20,15 @@
       margin: 0 auto;
       font-family: Arial, sans-serif;
       font-size: 1em;
-      background-color: rgba(255, 255, 255, 0.7);
-      color: #000000;
+      color: #ffffff;
+      caption{
+        padding: 0 0 20px;
+      }
 
       thead {
         th {
           padding: 10px;
-          border: 1px solid #000000;
+          border: 1px solid #ffffff;
           text-align: left;
           font-weight: bold;
         }
@@ -27,7 +37,7 @@
       tbody {
         td {
           padding: 10px;
-          border: 1px solid #000000;
+          border: 1px solid #ffffff;
           text-align: left;
         }
       }
